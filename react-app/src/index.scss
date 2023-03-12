@@ -1,0 +1,206 @@
+// Colours
+
+$primaryDark: #262626;
+$SecondaryDark: #323232;
+$primaryLight: #FFFAFA;
+$buttonColorDark: rgba(128, 128, 128, 0.1);
+$circleGreenHover: #4CAF50;
+$circleRedHover: #DC143C;
+
+
+* {
+    box-sizing: border-box;
+} 
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+// Typography //
+
+h1 {
+    margin: 0;
+}
+
+// App Light
+
+.App.light {
+    background: $primaryLight;
+    
+    h1 {
+        color: $primaryDark;
+    }
+
+    .theme-btn > ion-icon {
+        color: $primaryDark;
+    }
+    
+    .buttons {
+        .circle,
+        .reset {
+            background: $buttonColorDark;
+        }
+
+        .reset:hover {
+            background: $SecondaryDark;
+            color: $primaryLight;
+        }
+        
+        
+    }
+}
+
+// App Dark
+
+.App.dark {  
+
+    h1 {
+        color: $primaryLight;
+    }
+
+    .theme-btn > ion-icon {
+        color: $primaryLight;
+      }
+
+    .main {
+        background: $primaryDark;    
+    
+        .buttons {
+            .circle {
+                background: $SecondaryDark;
+                color: $primaryLight;
+            }
+    
+            .reset {
+                background: $SecondaryDark;
+                color: $primaryLight;
+            }
+    
+            // Dark Main Pseudo Classes
+    
+            .reset:hover,
+            .reset:focus {
+                background: $primaryLight;
+                color: $primaryDark;
+            }
+
+        }  
+        
+    }
+
+
+}
+
+// App
+
+.App {
+
+    ion-icon {
+        font-size: 24px;
+      }
+
+      .theme-btn {
+        cursor: pointer;
+        position: absolute;
+        top: 8%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 50px;
+        width: 50px;
+        display: grid;
+        place-content: center;
+        border-radius: 50%;
+      }
+
+      .theme-btn:hover,
+      .theme-btn:focus {
+        background: rgba(128, 128, 128, 0.1)
+        ;
+      }
+
+
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh; 
+        transition: all 0.2s ease;       
+
+        h1 {
+            font-size: 4rem;
+        }        
+    
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7.5px;
+    
+            .circle {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                display: grid;
+                place-content: center;
+            }
+
+            .circle, 
+            .reset {
+                cursor: pointer;
+            }
+            
+            .reset, .circle {
+                -webkit-user-select: none; /* Safari */
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* Internet Explorer */
+                user-select: none; /* Non-prefixed version, supported by most browsers */
+            }
+    
+            .reset {
+                padding: 0.5em;
+                border-radius: 5px;
+                font-weight: bolder;
+                letter-spacing: 1px;
+            }
+
+            .circle-green:hover,
+            .circle-green:focus {
+                background: $circleGreenHover;
+                color: $primaryLight;
+            }
+
+            .circle-red:hover,
+            .circle-red:focus {
+                background: $circleRedHover;
+                color: $primaryLight;
+            }
+    
+        }   
+    }
+}
+
+// Media Queries
+
+@media (max-width: 600px) {
+    .App {
+        .main {
+            ion-icon {
+                font-size: 42px;
+            }
+
+            .buttons {
+                .circle {
+                    height: 100px;
+                    width: 100px;
+                }
+                .reset {
+                    padding: 1em;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}

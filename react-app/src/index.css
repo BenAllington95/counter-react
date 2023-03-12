@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  margin: 0;
+}
+
+.App.light {
+  background: #FFFAFA;
+}
+.App.light h1 {
+  color: #262626;
+}
+.App.light .theme-btn > ion-icon {
+  color: #262626;
+}
+.App.light .buttons .circle,
+.App.light .buttons .reset {
+  background: rgba(128, 128, 128, 0.1);
+}
+.App.light .buttons .reset:hover {
+  background: #323232;
+  color: #FFFAFA;
+}
+
+.App.dark h1 {
+  color: #FFFAFA;
+}
+.App.dark .theme-btn > ion-icon {
+  color: #FFFAFA;
+}
+.App.dark .main {
+  background: #262626;
+}
+.App.dark .main .buttons .circle {
+  background: #323232;
+  color: #FFFAFA;
+}
+.App.dark .main .buttons .reset {
+  background: #323232;
+  color: #FFFAFA;
+}
+.App.dark .main .buttons .reset:hover,
+.App.dark .main .buttons .reset:focus {
+  background: #FFFAFA;
+  color: #262626;
+}
+
+.App ion-icon {
+  font-size: 24px;
+}
+.App .theme-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 50px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+}
+.App .theme-btn:hover,
+.App .theme-btn:focus {
+  background: rgba(128, 128, 128, 0.1);
+}
+.App .main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  transition: all 0.2s ease;
+}
+.App .main h1 {
+  font-size: 4rem;
+}
+.App .main .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7.5px;
+}
+.App .main .buttons .circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+.App .main .buttons .circle,
+.App .main .buttons .reset {
+  cursor: pointer;
+}
+.App .main .buttons .reset, .App .main .buttons .circle {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */ /* Internet Explorer */
+  user-select: none; /* Non-prefixed version, supported by most browsers */
+}
+.App .main .buttons .reset {
+  padding: 0.5em;
+  border-radius: 5px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+.App .main .buttons .circle-green:hover,
+.App .main .buttons .circle-green:focus {
+  background: #4CAF50;
+  color: #FFFAFA;
+}
+.App .main .buttons .circle-red:hover,
+.App .main .buttons .circle-red:focus {
+  background: #DC143C;
+  color: #FFFAFA;
+}
+
+@media (max-width: 600px) {
+  .App .main ion-icon {
+    font-size: 42px;
+  }
+  .App .main .buttons .circle {
+    height: 100px;
+    width: 100px;
+  }
+  .App .main .buttons .reset {
+    padding: 1em;
+    border-radius: 10px;
+  }
+}/*# sourceMappingURL=index.css.map */
