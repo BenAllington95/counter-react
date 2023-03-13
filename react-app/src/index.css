@@ -47,8 +47,7 @@ h1 {
   background: #323232;
   color: #FFFAFA;
 }
-.App.dark .main .buttons .reset:hover,
-.App.dark .main .buttons .reset:focus {
+.App.dark .main .buttons .reset:hover, .App.dark .main .buttons .reset:focus {
   background: #FFFAFA;
   color: #262626;
 }
@@ -68,8 +67,7 @@ h1 {
   place-content: center;
   border-radius: 50%;
 }
-.App .theme-btn:hover,
-.App .theme-btn:focus {
+.App .theme-btn:hover, .App .theme-btn:focus {
   background: rgba(128, 128, 128, 0.1);
 }
 .App .main {
@@ -100,7 +98,8 @@ h1 {
 .App .main .buttons .reset {
   cursor: pointer;
 }
-.App .main .buttons .reset, .App .main .buttons .circle {
+.App .main .buttons .reset,
+.App .main .buttons .circle {
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */ /* Internet Explorer */
   user-select: none; /* Non-prefixed version, supported by most browsers */
@@ -111,13 +110,11 @@ h1 {
   font-weight: bolder;
   letter-spacing: 1px;
 }
-.App .main .buttons .circle-green:hover,
-.App .main .buttons .circle-green:focus {
+.App .main .buttons .circle-green:focus, .App .main .buttons .circle-green:hover {
   background: #4CAF50;
   color: #FFFAFA;
 }
-.App .main .buttons .circle-red:hover,
-.App .main .buttons .circle-red:focus {
+.App .main .buttons .circle-red:focus, .App .main .buttons .circle-red:hover {
   background: #DC143C;
   color: #FFFAFA;
 }
